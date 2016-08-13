@@ -3,6 +3,15 @@
 
   window.onload = function() {
     var button = document.getElementById("stupidbutton");
-    // TODO: Do something with the button
+    var origText = button.innerHTML;
+    var onClickText = "wh00p!";
+
+    button.onmousedown = function(e) {
+      this.innerHTML = onClickText;
+    };
+
+    button.onmouseup = function(e) {
+      this.innerHTML = origText;
+    };
   };
 }());
